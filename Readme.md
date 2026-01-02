@@ -2,10 +2,10 @@
 
 <table>
   <tr>
-    <td style="width: 280px;">
-      <img src="./img/proto.png" alt="the first prototype img in this project🥲" width="500">
+    <td style="width: 360px; vertical-align: top;">
+      <img src="./img/proto.png" alt="the first prototype img in this project🥲" width="99%">
     </td>
-    <td>
+    <td style="vertical-align: top; padding-left: 16px;">
 
 ### *Death is not the end.*
 
@@ -15,7 +15,8 @@ Built in **Godot**, it’s **mobile-first** (desktop later), and designed around
 You won’t win by grinding stats.  
 You win by understanding the dungeon.
 
-Game Design Document 👉 **[Game Design Document](GameDesign.md)**  
+**Game Design Document** 👉 [GameDesign.md](GameDesign.md)  
 *(This is a living document and will change as the game evolves.)*
+
   </tr>
 </table>
