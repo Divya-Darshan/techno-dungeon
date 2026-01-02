@@ -64,13 +64,12 @@
 # 5. Audio Design
 
 - **Music Style:**  
-  Ambient, minimal, spooky. `Steal it from Minecraft if you have to 😂`  
+  Ambient, minimal, spooky. `Steal it from other game if you have to 😂`  
 
 - **Sound Effects:**  
   Footsteps, UI clicks, light combat noises, gadget beeps. Basically, enough to make it feel alive but not explode your ears.
 
-- **Voice Acting:**  
-  None. Broke. Sorry 😅
+- **Voice Acting:**    None. Broke. Sorry 😅
 
 ---
 
@@ -127,3 +126,6 @@
 5. **Testing:** Die a lot, fix bugs, survive.  
 6. **Launch:** Put it on the store. Hope for the best.  
 7. **Post-launch:** Patch, update, DLC, rinse, repeat. <!-- 🥲😥 -->
+
+
+> This document is a living GDD and will change as the project evolves. [`` Good luck to you 🫵 ``]
