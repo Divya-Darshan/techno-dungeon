@@ -2,7 +2,7 @@
 
 # 1. Overview and Vision
 
-- **Game Title & Tagline**: ``not named yet & Death is not the end.``
+- **Game Title & Tagline**: ``not named yet & Death is not gonna be the end.`` <!--[Cause the quit btn is 😂👍]-->
 
 - **High-level Summary**: ``game prototype set in a techno-medieval dungeon, featuring 2D sprite characters inside a PS1-style 3D world, focused on atmosphere, simple mechanics, and repeatable gameplay loops.``
 
