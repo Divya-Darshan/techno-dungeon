@@ -13,10 +13,10 @@
 # 2. Gameplay Core
 
 - **Core Gameplay Loop:**  
-  Explore dungeon → die horribly → respawn → maybe survive this time → rinse and repeat. Learning is the real loot here.  
+  Explore dungeon -> die horribly -> respawn -> maybe survive this time → rinse and repeat. Learning is the real loot here.  
 
 - **Primary Mechanics:**  
-  Move around, dodge stuff, maybe fight a little, poke things, push buttons, look cool in your 2D sprite outfit.
+  Move around, dodge stuff, maybe fight a little(cause I'm bad with animation😩🤌), poke things, push buttons, look cool in your 2D sprite outfit.
 
 - **Secondary Systems:**  
   Pick some upgrades, choose a path, touch some futuristic gadgets, maybe even press a hologram button (or fail spectacularly).
