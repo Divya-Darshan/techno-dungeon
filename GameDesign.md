@@ -129,3 +129,8 @@
 
 
 > This document is a living GDD and will change as the project evolves. [`` Good luck to you 🫵 ``]
+
+# WHAT WE GONNA DO?
+I'm wanna make what's in my mind to reality but I don't know how 😂🥲.
+
+
