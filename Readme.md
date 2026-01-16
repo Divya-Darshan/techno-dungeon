@@ -7,14 +7,8 @@ Built in **Godot**, it’s **mobile-first** (desktop later), and designed around
 You won’t win by grinding stats.  
 You win by understanding the dungeon.
 
----
-👉 **[Read the full Game Design Document](GameDesign.md)**  
+**Game Design Document** 👉 [GameDesign.md](GameDesign.md)  
 *(This is a living document and will change as the game evolves.)*
-<img src="./img/proto.png" >
 
-
-
----
-
-
-
+  </tr>
+</table>
