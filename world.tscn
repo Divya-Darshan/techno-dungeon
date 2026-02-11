@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://3sjkjgv70uil" path="res://moble.blend" id="1_f3sb7"]
 
-[node name="Node3D" type="Node3D" unique_id=839682356]
+[node name="world" type="Node3D" unique_id=839682356]
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=548134400]
 anchors_preset = 15
@@ -11,12 +11,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 stretch = true
+mouse_target = true
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=1337693737]
 size = Vector2i(480, 270)
 
-[node name="moble" parent="SubViewportContainer/SubViewport" unique_id=245494041 instance=ExtResource("1_f3sb7")]
+[node name="moble" parent="SubViewportContainer/SubViewport" unique_id=437086029 instance=ExtResource("1_f3sb7")]
 transform = Transform3D(0.2326109, 0, 0, 0, 0.2326109, 0, 0, 0, 0.2326109, -0.28819907, 0.33460486, 0.52327776)
 
 [node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport" unique_id=1575919868]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3379984, 0.4105146, 2.3535275)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3379984, 0.4105146, 1.6729355)
