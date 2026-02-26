@@ -134,5 +134,3 @@
 I'm wanna make what's in my mind to reality but I don't know how 😂🥲.
 
 [ 25/2/26 ] - I just combine this idea with one of the scenes which I got in my mind That was batman man, In the movie Dark Knight he got stuck in a pit Wish I can assume that it is gonna be the dungeon And the protagonist tries to climb out
-
-
