@@ -134,3 +134,5 @@
 I'm wanna make what's in my mind to reality but I don't know how 😂🥲.
 
 [ 25/2/26 ] - I just combine this idea with one of the scenes which I got in my mind That was batman man, In the movie Dark Knight he got stuck in a pit Wish I can assume that it is gonna be the dungeon And the protagonist tries to climb out
+
+[ 1/3/26 ] - Yes I have figured out finally It took me two months Art style and restore 10 months is solid for developing Dad stars coming up really great and I learned how to make 16 bit Coloured Texture
