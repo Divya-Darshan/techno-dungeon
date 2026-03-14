@@ -10,5 +10,18 @@ You win by understanding the dungeon.
 **Game Design Document** 👉 [GameDesign.md](GameDesign.md)  
 *(This is a living document and will change as the game evolves.)*
 
+
+  
+
+
+<table>
+  <tr>
+    <td>
+      <img src="https://github.com/darshniDev/techno-dungeon/blob/main/img/proto.png" width="300">
+    </td>
+    <td>
+      <img src="https://github.com/darshniDev/techno-dungeon/blob/main/img/pinkproto.png" width="300">
+    </td>
   </tr>
 </table>
+
