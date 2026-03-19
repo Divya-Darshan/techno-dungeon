@@ -11,7 +11,7 @@ You win by understanding the dungeon.
 *(This is a living document and will change as the game evolves.)*
 
 <p align="center">
-  <a href="https://raw.githubusercontent.com/Divya-Darshan/Bonk_Cars/main/app/app.apk">
+  <a href="https://raw.githubusercontent.com/Divya-Darshan/techno-dungeon/main/app/app.apk">
    <img src="https://img.shields.io/badge/Download%20APK-3DDC84?style=for-the-badge&logo=android&logoColor=white&labelColor=0A0A0A&color=37ad4c" height="130"/>
   </a>
 </p>
