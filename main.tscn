@@ -15,6 +15,9 @@ sky = SubResource("Sky_h2yge")
 tonemap_mode = 2
 glow_enabled = true
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ig7tw"]
+albedo_color = Color(0.42887047, 0.70847297, 0.4355128, 1)
+
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_7dm0k"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_lquwl"]
@@ -30,8 +33,10 @@ shadow_enabled = true
 environment = SubResource("Environment_1bvp3")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=837236100]
-transform = Transform3D(35.58568, 0, 0, 0, 0.036317587, 0, 0, 0, 18.320599, 0, 0, 0)
+transform = Transform3D(35.58568, 0, 0, 0, 0.036317587, 0, 0, 0, 18.320599, 16.0743, -0.24118805, 15.403645)
+material_override = SubResource("StandardMaterial3D_ig7tw")
 use_collision = true
+size = Vector3(3.7544556, 1, 13.879822)
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1372288728]
 script = ExtResource("1_ig7tw")
@@ -48,3 +53,23 @@ shape = SubResource("ConvexPolygonShape3D_lquwl")
 
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Node3D" unique_id=2143269329]
 transform = Transform3D(1, 0, 0, 0, 0.9940867, 0.10858928, 0, -0.10858928, 0.9940867, 0, 2.153877, 0)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=685891075]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.034362793, 0, 0.4997406)
+use_collision = true
+size = Vector3(5.05896, 1, 4.5367126)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=1377840764]
+transform = Transform3D(1, 0, 0, 0, 6.0018034, 0, 0, 0, 3.3593886, 17.060951, 3.3114192, 33.060013)
+use_collision = true
+size = Vector3(10.721863, 1.2558525, 4.5367126)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="." unique_id=1065101790]
+transform = Transform3D(1, 0, 0, 0, 6.0018034, 0, 0, 0, 3.3593886, 35.869637, 4.3626156, 33.060013)
+use_collision = true
+size = Vector3(10.721863, 1.606146, 4.5367126)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="." unique_id=191676837]
+transform = Transform3D(1, 0, 0, 0, 6.0018034, 0, 0, 0, 3.3593886, -0.14846039, 1.6420324, 33.060013)
+use_collision = true
+size = Vector3(10.721863, 0.69955736, 4.5367126)
