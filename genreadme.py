@@ -1,7 +1,6 @@
 import re
 
 def extract_video_id(url):
-    # Handles both youtu.be and youtube.com links
     match = re.search(r"(?:v=|youtu\.be/)([A-Za-z0-9_-]+)", url)
     return match.group(1) if match else None
 
@@ -17,11 +16,22 @@ markdown_lines = []
 for link in links:
     video_id = extract_video_id(link)
     if video_id:
-        markdown = f"[![Watch](https://img.youtube.com/vi/{video_id}/0.jpg)]({link})"
-        markdown_lines.append(markdown)
+        markdown = f"""
+<div align="center" style="margin-bottom:30px;">
 
-# Write to README file
+<div style="border-radius:12px; overflow:hidden; display:inline-block; box-shadow:0 4px 12px rgba(0,0,0,0.2);">
+
+<a href="{link}">
+<img src="https://img.youtube.com/vi/{video_id}/maxresdefault.jpg" width="480"/>
+</a>
+
+</div>
+
+</div>
+"""
+        markdown_lines.append(markdown.strip())
+
 with open(output_file, "w") as f:
     f.write("\n\n".join(markdown_lines))
 
-print("README_generated.md created successfully!")
+print("Tutorials.md created successfully!")
