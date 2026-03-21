@@ -8,7 +8,8 @@ You won’t win by grinding stats.
 You win by understanding the dungeon.
 
 **Game Design Document** 👉 [GameDesign.md](GameDesign.md)  
-*(This is a living document and will change as the game evolves.)*
+**Tutorials Docs** 👉 [Tutorials.md](Tutorials.md)  
+*(This is living documents and will change as the game evolves.)*
 
 <p align="center">
   <a href="https://raw.githubusercontent.com/Divya-Darshan/techno-dungeon/main/app/app.apk">
