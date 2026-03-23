@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dh5gxyfrg4wbi" path="res://player/player.gd" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://m06pj5v46ld2" path="res://img/proto.png" id="2_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://l8j2w6biteyj" path="res://img/test/front.png" id="2_h2yge"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0xm2m"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -56,7 +57,13 @@ shape = SubResource("ConvexPolygonShape3D_lquwl")
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Node3D" unique_id=2143269329]
 transform = Transform3D(1, 0, 0, 0, 0.9940867, 0.10858928, 0, -0.10858928, 0.9940867, 0, 2.153877, 0)
 
+[node name="Sprite3D" type="Sprite3D" parent="CharacterBody3D/Node3D/Camera3D" unique_id=774694983]
+transform = Transform3D(1, 0, 0, 0, 0.9940867, -0.10858928, 0, 0.10858928, 0.9940867, 0, 0.42872715, -2.6362848)
+billboard = 1
+texture = ExtResource("2_h2yge")
+
 [node name="Control" type="Control" parent="CharacterBody3D" unique_id=542920925]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = 104.0
@@ -113,7 +120,7 @@ use_collision = true
 size = Vector3(10.721863, 0.69955736, 4.5367126)
 
 [node name="CSGBox3D6" type="CSGBox3D" parent="." unique_id=732906525]
-transform = Transform3D(-0.14117227, 0, -4.9912124, 0, 19.131945, 0, 3.2140665, 0, -0.21923035, 56.335354, 10.774397, 66.11723)
+transform = Transform3D(-0.14117227, 0, -4.9912124, 0, 19.131945, 0, 3.2140665, 0, -0.21923035, 56.335354, 28.024473, 65.18817)
 use_collision = true
 size = Vector3(10.721863, 1.2558525, 4.5367126)
 

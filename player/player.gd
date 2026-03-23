@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 const SPEED = 10.0
-const JUMP_VELOCITY = 10.0
+const JUMP_VELOCITY = 50.0
 const CAMERA_SENSE = 0.001
 
 # camera shake
