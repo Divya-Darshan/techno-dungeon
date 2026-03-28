@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://dh5gxyfrg4wbi" path="res://player/player.gd" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://m06pj5v46ld2" path="res://img/proto.png" id="2_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://l8j2w6biteyj" path="res://img/test/front.png" id="2_h2yge"]
+[ext_resource type="Texture2D" uid="uid://bry2stramoc47" path="res://img/test/back.png" id="4_1bvp3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0xm2m"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -17,12 +19,29 @@ tonemap_mode = 2
 glow_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ig7tw"]
-albedo_color = Color(0.42887047, 0.70847297, 0.4355128, 1)
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_7dm0k"]
+albedo_texture = ExtResource("2_0xm2m")
+albedo_texture_force_srgb = true
+roughness = 0.06
+emission_enabled = true
+emission_energy_multiplier = 1.11
+billboard_keep_scale = true
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_lquwl"]
 points = PackedVector3Array(-0.12520654, -0.532801, -0.4805069, 0.022783129, 0.4760704, 0.49888408, 0.16971254, 0.5591441, 0.46417162, 0.23105091, -0.8035912, 0.32045516, 0.40741014, 0.651043, -0.24352328, -0.4827893, 0.59484255, 0.082213186, -0.3628679, -0.68231165, 0.2896967, 0.46904355, -0.65452886, -0.06627126, -0.12744367, 0.8427015, -0.33810276, -0.39343542, -0.6839421, -0.24471663, 0.43825462, 0.62330925, 0.20084947, 0.0841477, 0.977454, 0.11479468, -0.06820232, -0.9764576, -0.12927033, 0.20054972, -0.56312895, -0.4514544, -0.18552664, 0.59545326, -0.4534751, -0.27336287, 0.59226835, 0.40775412, -0.0069364863, -0.47682306, 0.49966025, 0.37582088, -0.5886136, 0.31695515, 0.111579016, 0.5630594, -0.48117727, -0.41725034, 0.5278656, -0.27049688, -0.48454633, -0.59697217, -0.06650971, -0.27974695, 0.90856135, 0.05333608, -0.25019687, -0.8807117, 0.20531891, 0.263647, -0.90277094, -0.1273943, 0.29336792, 0.8715263, -0.15719566, 0.3734115, -0.5263189, -0.32824618, 0.4996626, 0.47664148, -0.0068885577, 0.053105574, 0.8750009, 0.32470253, -0.15454252, -0.5908538, 0.4658794, -0.09727988, -0.7823577, -0.39818847, -0.3876489, -0.49817133, 0.31564978, -0.30067965, -0.58799505, -0.38890144)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lquwl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_1bvp3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_h2yge")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Main" type="Node3D" unique_id=1497525646]
 
@@ -43,18 +62,21 @@ size = Vector3(3.7544556, 1, 13.879822)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.760227, 11.98488)
 script = ExtResource("1_ig7tw")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D" unique_id=2124995940]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.7882795, 0)
-mesh = SubResource("CapsuleMesh_7dm0k")
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=946739562]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6789927, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.085757494, 1.7680721, -2.674286)
 shape = SubResource("ConvexPolygonShape3D_lquwl")
 
 [node name="Node3D" type="Node3D" parent="CharacterBody3D" unique_id=1612766895]
 
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Node3D" unique_id=2143269329]
-transform = Transform3D(1, 0, 0, 0, 0.9940867, 0.10858928, 0, -0.10858928, 0.9940867, 0, 2.153877, 0)
+transform = Transform3D(1, 0, 0, 0, 0.9940867, 0.10858928, 0, -0.10858928, 0.9940867, 0, 2.7523403, 0)
+
+[node name="Sprite3D" type="Sprite3D" parent="CharacterBody3D/Node3D" unique_id=774694983]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2937965, -1.7317553)
+billboard = 1
+shaded = true
+texture_filter = 2
+texture = ExtResource("2_h2yge")
 
 [node name="Control" type="Control" parent="CharacterBody3D" unique_id=542920925]
 layout_mode = 3
@@ -92,10 +114,12 @@ texture_normal = ExtResource("2_0xm2m")
 passby_press = true
 action = "a"
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=685891075]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.034362793, 0, 0.4997406)
-use_collision = true
-size = Vector3(5.05896, 1, 4.5367126)
+[node name="jump" type="TouchScreenButton" parent="CharacterBody3D/Control" unique_id=308061570]
+position = Vector2(795.00006, 478)
+scale = Vector2(0.37812218, 0.22484201)
+texture_normal = ExtResource("2_0xm2m")
+passby_press = true
+action = "ui_accept"
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=1377840764]
 transform = Transform3D(1, 0, 0, 0, 6.0018034, 0, 0, 0, 3.3593886, 17.060951, 3.3114192, 33.060013)
@@ -113,7 +137,7 @@ use_collision = true
 size = Vector3(10.721863, 0.69955736, 4.5367126)
 
 [node name="CSGBox3D6" type="CSGBox3D" parent="." unique_id=732906525]
-transform = Transform3D(-0.14117227, 0, -4.9912124, 0, 19.131945, 0, 3.2140665, 0, -0.21923035, 56.335354, 10.774397, 66.11723)
+transform = Transform3D(-0.14117227, 0, -4.9912124, 0, 19.131945, 0, 3.2140665, 0, -0.21923035, 56.335354, 28.024473, 65.18817)
 use_collision = true
 size = Vector3(10.721863, 1.2558525, 4.5367126)
 
@@ -126,3 +150,12 @@ size = Vector3(10.721863, 1.606146, 4.5367126)
 transform = Transform3D(-0.14117227, 0, -4.9912124, 0, 19.131945, 0, 3.2140665, 0, -0.21923035, 57.35992, 5.4528933, 35.55275)
 use_collision = true
 size = Vector3(10.721863, 0.69955736, 4.5367126)
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=2006761410]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.047571, 0.30451775)
+billboard = 1
+shaded = true
+alpha_cut = 1
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_lquwl")
+autoplay = "default"

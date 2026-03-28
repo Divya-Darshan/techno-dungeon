@@ -2,29 +2,27 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://m06pj5v46ld2"
-path.s3tc="res://.godot/imported/proto.png-dda396fdf7d4d9e6529b89c30af11a5c.s3tc.ctex"
-path.etc2="res://.godot/imported/proto.png-dda396fdf7d4d9e6529b89c30af11a5c.etc2.ctex"
+uid="uid://l8j2w6biteyj"
+path="res://.godot/imported/front.png-533180ecd58f2a0705c443e17845008e.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/proto.png"
-dest_files=["res://.godot/imported/proto.png-dda396fdf7d4d9e6529b89c30af11a5c.s3tc.ctex", "res://.godot/imported/proto.png-dda396fdf7d4d9e6529b89c30af11a5c.etc2.ctex"]
+source_file="res://img/test/front.png"
+dest_files=["res://.godot/imported/front.png-533180ecd58f2a0705c443e17845008e.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
-compress/channel_pack=0
+compress/channel_pack=1
 mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0

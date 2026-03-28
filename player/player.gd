@@ -6,7 +6,7 @@ const CAMERA_SENSE = 0.001
 
 # camera shake
 const BOB_FREQ = 2.0
-const BOB_AMP = 0.08
+const BOB_AMP = 0.07
 var t_bob = 0.0 
 var camera_base_pos: Vector3
 
