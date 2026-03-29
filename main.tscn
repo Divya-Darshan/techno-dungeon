@@ -75,6 +75,7 @@ transform = Transform3D(1, 0, 0, 0, 0.9940867, 0.10858928, 0, -0.10858928, 0.994
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2937965, -1.7317553)
 billboard = 1
 shaded = true
+alpha_cut = 1
 texture_filter = 2
 texture = ExtResource("2_h2yge")
 
