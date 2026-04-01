@@ -71,7 +71,17 @@ use_collision = true
 size = Vector3(3.7544556, 1, 13.879822)
 
 [node name="CSGBox3D2" type="MeshInstance3D" parent="." unique_id=1785608349]
-transform = Transform3D(-2.122188e-07, 4.855, -2.122188e-07, 0, -2.122188e-07, -4.855, -4.855, -2.122188e-07, 9.276378e-15, -2.7231586, 7.116507, -9.810971)
+transform = Transform3D(-2.122188e-07, 4.855, -2.122188e-07, 0, -2.122188e-07, -4.855, -4.855, -2.122188e-07, 9.276378e-15, -2.7231586, 3.8940663, -9.810971)
+mesh = SubResource("PlaneMesh_7mycd")
+surface_material_override/0 = SubResource("StandardMaterial3D_272bh")
+
+[node name="CSGBox3D10" type="MeshInstance3D" parent="." unique_id=1140214611]
+transform = Transform3D(4.855, 0, 0, 0, -2.122188e-07, -4.855, 0, 4.855, -2.122188e-07, 0.47929645, 3.8940663, -13.028818)
+mesh = SubResource("PlaneMesh_7mycd")
+surface_material_override/0 = SubResource("StandardMaterial3D_272bh")
+
+[node name="CSGBox3D9" type="MeshInstance3D" parent="." unique_id=627953096]
+transform = Transform3D(-2.122188e-07, -4.855, 2.122188e-07, 0, -2.122188e-07, -4.855, 4.855, -2.122188e-07, 9.276378e-15, 3.2254143, 3.8940663, -9.810971)
 mesh = SubResource("PlaneMesh_7mycd")
 surface_material_override/0 = SubResource("StandardMaterial3D_272bh")
 
