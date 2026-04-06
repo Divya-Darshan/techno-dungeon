@@ -4,8 +4,9 @@
 [ext_resource type="Script" uid="uid://dh5gxyfrg4wbi" path="res://player/player.gd" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://m06pj5v46ld2" path="res://img/proto.png" id="2_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://l8j2w6biteyj" path="res://img/test/front.png" id="2_h2yge"]
-[ext_resource type="Texture2D" uid="uid://bry2stramoc47" path="res://img/test/back.png" id="4_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://b237wp3uxk0yk" path="res://img/Squid_mech.png" id="5_272bh"]
 [ext_resource type="PackedScene" uid="uid://djju5pm3a4mct" path="res://minecraft/scene.gltf" id="5_lquwl"]
+[ext_resource type="PackedScene" uid="uid://fmd8yhel7mrb" path="res://minecraft/bread.blend" id="7_272bh"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0xm2m"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -45,10 +46,7 @@ points = PackedVector3Array(-0.12520654, -0.532801, -0.4805069, 0.022783129, 0.4
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_1bvp3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_h2yge")
+"texture": ExtResource("5_272bh")
 }],
 "loop": true,
 "name": &"default",
@@ -71,17 +69,17 @@ use_collision = true
 size = Vector3(3.7544556, 1, 13.879822)
 
 [node name="CSGBox3D2" type="MeshInstance3D" parent="." unique_id=1785608349]
-transform = Transform3D(-2.122188e-07, 4.855, -2.122188e-07, 0, -2.122188e-07, -4.855, -4.855, -2.122188e-07, 9.276378e-15, -2.7231586, 3.8940663, -9.810971)
+transform = Transform3D(-2.122188e-07, 4.855, -2.122188e-07, 0, -2.122188e-07, -4.855, -4.855, -2.122188e-07, 9.276378e-15, -22.143736, 3.8940663, -9.810971)
 mesh = SubResource("PlaneMesh_7mycd")
 surface_material_override/0 = SubResource("StandardMaterial3D_272bh")
 
 [node name="CSGBox3D10" type="MeshInstance3D" parent="." unique_id=1140214611]
-transform = Transform3D(4.855, 0, 0, 0, -2.122188e-07, -4.855, 0, 4.855, -2.122188e-07, 0.47929645, 3.8940663, -13.028818)
+transform = Transform3D(4.855, 0, 0, 0, -2.122188e-07, -4.855, 0, 4.855, -2.122188e-07, -18.941282, 3.8940663, -10.917232)
 mesh = SubResource("PlaneMesh_7mycd")
 surface_material_override/0 = SubResource("StandardMaterial3D_272bh")
 
 [node name="CSGBox3D9" type="MeshInstance3D" parent="." unique_id=627953096]
-transform = Transform3D(-2.122188e-07, -4.855, 2.122188e-07, 0, -2.122188e-07, -4.855, 4.855, -2.122188e-07, 9.276378e-15, 3.2254143, 3.8940663, -9.810971)
+transform = Transform3D(-2.122188e-07, -4.855, 2.122188e-07, 0, -2.122188e-07, -4.855, 4.855, -2.122188e-07, 9.276378e-15, -16.195164, 3.8940663, -9.810971)
 mesh = SubResource("PlaneMesh_7mycd")
 surface_material_override/0 = SubResource("StandardMaterial3D_272bh")
 
@@ -181,7 +179,7 @@ use_collision = true
 size = Vector3(10.721863, 0.69955736, 4.5367126)
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=2006761410]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.047571, 0.30451775)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.055997, 0.30451775)
 billboard = 2
 shaded = true
 alpha_cut = 1
@@ -191,3 +189,6 @@ autoplay = "default"
 
 [node name="Sketchfab_Scene" parent="." unique_id=1918177668 instance=ExtResource("5_lquwl")]
 transform = Transform3D(-0.08057698, 0, 0.018073125, 0, 0.08257898, 0, -0.018073125, 0, -0.08057698, 0.36904788, 1.1131419, -1.3156953)
+
+[node name="bread" parent="." unique_id=57724077 instance=ExtResource("7_272bh")]
+transform = Transform3D(0.9941902, -0.007219907, -0.10739479, 0.0879812, 0.6293012, 0.77216554, 0.06200871, -0.77712804, 0.6262805, 0.9398596, 0.85165846, -1.2527235)
