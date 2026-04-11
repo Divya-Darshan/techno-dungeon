@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://dh5gxyfrg4wbi" path="res://player/player.gd" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://m06pj5v46ld2" path="res://img/proto.png" id="2_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://l8j2w6biteyj" path="res://img/test/front.png" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://eekjh5pxjcpu" path="res://minecraft/gun.blend" id="4_5vw27"]
 [ext_resource type="Texture2D" uid="uid://b237wp3uxk0yk" path="res://img/Squid_mech.png" id="5_272bh"]
 [ext_resource type="PackedScene" uid="uid://djju5pm3a4mct" path="res://minecraft/scene.gltf" id="5_lquwl"]
 [ext_resource type="PackedScene" uid="uid://fmd8yhel7mrb" path="res://minecraft/bread.blend" id="7_272bh"]
@@ -29,18 +30,21 @@ emission_energy_multiplier = 6.78
 texture_filter = 0
 billboard_keep_scale = true
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_7mycd"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_272bh"]
-albedo_texture = ExtResource("1_7mycd")
-uv1_scale = Vector3(2.045, 2.045, 2.045)
-uv1_triplanar = true
-texture_filter = 0
-proximity_fade_enabled = true
-proximity_fade_distance = 0.01
-
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_lquwl"]
 points = PackedVector3Array(-0.12520654, -0.532801, -0.4805069, 0.022783129, 0.4760704, 0.49888408, 0.16971254, 0.5591441, 0.46417162, 0.23105091, -0.8035912, 0.32045516, 0.40741014, 0.651043, -0.24352328, -0.4827893, 0.59484255, 0.082213186, -0.3628679, -0.68231165, 0.2896967, 0.46904355, -0.65452886, -0.06627126, -0.12744367, 0.8427015, -0.33810276, -0.39343542, -0.6839421, -0.24471663, 0.43825462, 0.62330925, 0.20084947, 0.0841477, 0.977454, 0.11479468, -0.06820232, -0.9764576, -0.12927033, 0.20054972, -0.56312895, -0.4514544, -0.18552664, 0.59545326, -0.4534751, -0.27336287, 0.59226835, 0.40775412, -0.0069364863, -0.47682306, 0.49966025, 0.37582088, -0.5886136, 0.31695515, 0.111579016, 0.5630594, -0.48117727, -0.41725034, 0.5278656, -0.27049688, -0.48454633, -0.59697217, -0.06650971, -0.27974695, 0.90856135, 0.05333608, -0.25019687, -0.8807117, 0.20531891, 0.263647, -0.90277094, -0.1273943, 0.29336792, 0.8715263, -0.15719566, 0.3734115, -0.5263189, -0.32824618, 0.4996626, 0.47664148, -0.0068885577, 0.053105574, 0.8750009, 0.32470253, -0.15454252, -0.5908538, 0.4658794, -0.09727988, -0.7823577, -0.39818847, -0.3876489, -0.49817133, 0.31564978, -0.30067965, -0.58799505, -0.38890144)
+
+[sub_resource type="GDScript" id="GDScript_5vw27"]
+script/source = "extends Node3D
+
+var bullet = preload(\"res://minecraft/bullit.tscn\")
+@onready var pos: Node3D = $Node3D
+
+func _physics_process(delta: float) -> void:
+	if Input.is_action_just_pressed(\"click\"):
+		var init = bullet.instantiate()
+		init.global_transform = pos.global_transform
+		get_tree().current_scene.add_child(init)
+"
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lquwl"]
 animations = [{
@@ -68,33 +72,25 @@ material_override = SubResource("StandardMaterial3D_ig7tw")
 use_collision = true
 size = Vector3(3.7544556, 1, 13.879822)
 
-[node name="CSGBox3D2" type="MeshInstance3D" parent="." unique_id=1785608349]
-transform = Transform3D(-2.122188e-07, 4.855, -2.122188e-07, 0, -2.122188e-07, -4.855, -4.855, -2.122188e-07, 9.276378e-15, -22.143736, 3.8940663, -9.810971)
-mesh = SubResource("PlaneMesh_7mycd")
-surface_material_override/0 = SubResource("StandardMaterial3D_272bh")
-
-[node name="CSGBox3D10" type="MeshInstance3D" parent="." unique_id=1140214611]
-transform = Transform3D(4.855, 0, 0, 0, -2.122188e-07, -4.855, 0, 4.855, -2.122188e-07, -18.941282, 3.8940663, -10.917232)
-mesh = SubResource("PlaneMesh_7mycd")
-surface_material_override/0 = SubResource("StandardMaterial3D_272bh")
-
-[node name="CSGBox3D9" type="MeshInstance3D" parent="." unique_id=627953096]
-transform = Transform3D(-2.122188e-07, -4.855, 2.122188e-07, 0, -2.122188e-07, -4.855, 4.855, -2.122188e-07, 9.276378e-15, -16.195164, 3.8940663, -9.810971)
-mesh = SubResource("PlaneMesh_7mycd")
-surface_material_override/0 = SubResource("StandardMaterial3D_272bh")
-
 [node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1372288728]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.760227, 11.98488)
 script = ExtResource("1_ig7tw")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=946739562]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.085757494, 1.7680721, -2.674286)
+transform = Transform3D(1, 0, 0, 0, 1.5994567, 0, 0, 0, 1, -0.021050036, 2.5380974, -1.7197332)
 shape = SubResource("ConvexPolygonShape3D_lquwl")
 
 [node name="Node3D" type="Node3D" parent="CharacterBody3D" unique_id=1612766895]
 
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Node3D" unique_id=2143269329]
-transform = Transform3D(1, 0, 0, 0, 0.9940867, 0.10858928, 0, -0.10858928, 0.9940867, 0, 2.7523403, 0)
+transform = Transform3D(1, 0, 0, 0, 0.9940867, 0.10858928, 0, -0.10858928, 0.9940867, 0, 3.4524622, -1.6974401)
+
+[node name="gun" parent="CharacterBody3D/Node3D/Camera3D" unique_id=2038045268 instance=ExtResource("4_5vw27")]
+transform = Transform3D(-2.590637, 0.010553857, -0.20750126, -0.034497604, 1.5690604, 0.23438266, 0.34350726, 0.23717123, -1.5413784, 0.4983431, -0.3354559, -1.1110048)
+script = SubResource("GDScript_5vw27")
+
+[node name="Node3D" type="Node3D" parent="CharacterBody3D/Node3D/Camera3D/gun" unique_id=424588587]
+transform = Transform3D(-0.99955386, 0.00256118, 0.029762555, 0.0050117304, 0.9965733, 0.08255648, -0.029449075, 0.0826688, -0.9961419, 0.0042204857, 0.032075882, 0.6567621)
 
 [node name="Sprite3D" type="Sprite3D" parent="CharacterBody3D/Node3D" unique_id=774694983]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2937965, -1.7317553)
