@@ -1,13 +1,9 @@
 [gd_scene format=3 uid="uid://bqb2ar0b57ycr"]
 
-[ext_resource type="Texture2D" uid="uid://cjmevx4k4ys06" path="res://test-txt.png" id="1_7mycd"]
 [ext_resource type="Script" uid="uid://dh5gxyfrg4wbi" path="res://player/player.gd" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://m06pj5v46ld2" path="res://img/proto.png" id="2_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://l8j2w6biteyj" path="res://img/test/front.png" id="2_h2yge"]
 [ext_resource type="PackedScene" uid="uid://eekjh5pxjcpu" path="res://minecraft/gun.blend" id="4_5vw27"]
-[ext_resource type="Texture2D" uid="uid://b237wp3uxk0yk" path="res://img/Squid_mech.png" id="5_272bh"]
-[ext_resource type="PackedScene" uid="uid://djju5pm3a4mct" path="res://minecraft/scene.gltf" id="5_lquwl"]
-[ext_resource type="PackedScene" uid="uid://fmd8yhel7mrb" path="res://minecraft/bread.blend" id="7_272bh"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0xm2m"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -21,14 +17,6 @@ background_mode = 2
 sky = SubResource("Sky_h2yge")
 tonemap_mode = 2
 glow_enabled = true
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ig7tw"]
-albedo_texture = ExtResource("1_7mycd")
-metallic = 1.0
-emission = Color(0.06053035, 0.06053035, 0.060530342, 1)
-emission_energy_multiplier = 6.78
-texture_filter = 0
-billboard_keep_scale = true
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_lquwl"]
 points = PackedVector3Array(-0.12520654, -0.532801, -0.4805069, 0.022783129, 0.4760704, 0.49888408, 0.16971254, 0.5591441, 0.46417162, 0.23105091, -0.8035912, 0.32045516, 0.40741014, 0.651043, -0.24352328, -0.4827893, 0.59484255, 0.082213186, -0.3628679, -0.68231165, 0.2896967, 0.46904355, -0.65452886, -0.06627126, -0.12744367, 0.8427015, -0.33810276, -0.39343542, -0.6839421, -0.24471663, 0.43825462, 0.62330925, 0.20084947, 0.0841477, 0.977454, 0.11479468, -0.06820232, -0.9764576, -0.12927033, 0.20054972, -0.56312895, -0.4514544, -0.18552664, 0.59545326, -0.4534751, -0.27336287, 0.59226835, 0.40775412, -0.0069364863, -0.47682306, 0.49966025, 0.37582088, -0.5886136, 0.31695515, 0.111579016, 0.5630594, -0.48117727, -0.41725034, 0.5278656, -0.27049688, -0.48454633, -0.59697217, -0.06650971, -0.27974695, 0.90856135, 0.05333608, -0.25019687, -0.8807117, 0.20531891, 0.263647, -0.90277094, -0.1273943, 0.29336792, 0.8715263, -0.15719566, 0.3734115, -0.5263189, -0.32824618, 0.4996626, 0.47664148, -0.0068885577, 0.053105574, 0.8750009, 0.32470253, -0.15454252, -0.5908538, 0.4658794, -0.09727988, -0.7823577, -0.39818847, -0.3876489, -0.49817133, 0.31564978, -0.30067965, -0.58799505, -0.38890144)
@@ -46,29 +34,17 @@ func _physics_process(delta: float) -> void:
 		get_tree().current_scene.add_child(init)
 "
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_lquwl"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("5_272bh")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
 [node name="Main" type="Node3D" unique_id=1497525646]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=89520766]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 10.992386, 19.296934, -4.1282578)
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1788702745]
 environment = SubResource("Environment_1bvp3")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=837236100]
-transform = Transform3D(35.58568, 0, 0, 0, 0.036317587, 0, 0, 0, 18.320599, 16.0743, -0.24118805, 15.403645)
-material_override = SubResource("StandardMaterial3D_ig7tw")
+transform = Transform3D(35.58568, 0, 0, 0, 0.036317587, 0, 0, 0, 18.320599, 25.575619, -0.39728546, 13.743347)
 use_collision = true
 size = Vector3(3.7544556, 1, 13.879822)
 
@@ -143,48 +119,3 @@ scale = Vector2(0.37812218, 0.22484201)
 texture_normal = ExtResource("2_0xm2m")
 passby_press = true
 action = "ui_accept"
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=1377840764]
-transform = Transform3D(1, 0, 0, 0, 6.0018034, 0, 0, 0, 3.3593886, 17.060951, 3.3114192, 33.060013)
-use_collision = true
-size = Vector3(10.721863, 1.2558525, 4.5367126)
-
-[node name="CSGBox3D4" type="CSGBox3D" parent="." unique_id=1065101790]
-transform = Transform3D(1, 0, 0, 0, 6.0018034, 0, 0, 0, 3.3593886, 35.869637, 4.3626156, 33.060013)
-use_collision = true
-size = Vector3(10.721863, 1.606146, 4.5367126)
-
-[node name="CSGBox3D5" type="CSGBox3D" parent="." unique_id=191676837]
-transform = Transform3D(1, 0, 0, 0, 6.0018034, 0, 0, 0, 3.3593886, -0.14846039, 1.6420324, 33.060013)
-use_collision = true
-size = Vector3(10.721863, 0.69955736, 4.5367126)
-
-[node name="CSGBox3D6" type="CSGBox3D" parent="." unique_id=732906525]
-transform = Transform3D(-0.14117227, 0, -4.9912124, 0, 19.131945, 0, 3.2140665, 0, -0.21923035, 56.335354, 28.024473, 65.18817)
-use_collision = true
-size = Vector3(10.721863, 1.2558525, 4.5367126)
-
-[node name="CSGBox3D7" type="CSGBox3D" parent="." unique_id=1534995870]
-transform = Transform3D(-0.14117227, 0, -4.9912124, 0, 19.131945, 0, 3.2140665, 0, -0.21923035, 55.215576, 14.125296, 99.52211)
-use_collision = true
-size = Vector3(10.721863, 1.606146, 4.5367126)
-
-[node name="CSGBox3D8" type="CSGBox3D" parent="." unique_id=880684524]
-transform = Transform3D(-0.14117227, 0, -4.9912124, 0, 19.131945, 0, 3.2140665, 0, -0.21923035, 57.35992, 5.4528933, 35.55275)
-use_collision = true
-size = Vector3(10.721863, 0.69955736, 4.5367126)
-
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=2006761410]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.055997, 0.30451775)
-billboard = 2
-shaded = true
-alpha_cut = 1
-texture_filter = 0
-sprite_frames = SubResource("SpriteFrames_lquwl")
-autoplay = "default"
-
-[node name="Sketchfab_Scene" parent="." unique_id=1918177668 instance=ExtResource("5_lquwl")]
-transform = Transform3D(-0.08057698, 0, 0.018073125, 0, 0.08257898, 0, -0.018073125, 0, -0.08057698, 0.36904788, 1.1131419, -1.3156953)
-
-[node name="bread" parent="." unique_id=57724077 instance=ExtResource("7_272bh")]
-transform = Transform3D(0.9941902, -0.007219907, -0.10739479, 0.0879812, 0.6293012, 0.77216554, 0.06200871, -0.77712804, 0.6262805, 0.9398596, 0.85165846, -1.2527235)
