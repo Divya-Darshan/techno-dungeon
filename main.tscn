@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://dh5gxyfrg4wbi" path="res://player/player.gd" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://m06pj5v46ld2" path="res://img/proto.png" id="2_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://l8j2w6biteyj" path="res://img/test/front.png" id="2_h2yge"]
-[ext_resource type="PackedScene" uid="uid://eekjh5pxjcpu" path="res://minecraft/gun.blend" id="4_5vw27"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0xm2m"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -20,19 +19,6 @@ glow_enabled = true
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1bvp3"]
 
-[sub_resource type="GDScript" id="GDScript_5vw27"]
-script/source = "extends Node3D
-
-var bullet = preload(\"res://minecraft/bullit.tscn\")
-@onready var pos: Node3D = $Node3D
-
-func _physics_process(delta: float) -> void:
-	if Input.is_action_just_pressed(\"click\"):
-		var init = bullet.instantiate()
-		init.global_transform = pos.global_transform
-		get_tree().current_scene.add_child(init)
-"
-
 [node name="Main" type="Node3D" unique_id=1497525646]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=89520766]
@@ -42,13 +28,8 @@ shadow_enabled = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1788702745]
 environment = SubResource("Environment_1bvp3")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=837236100]
-transform = Transform3D(35.58568, 0, 0, 0, 0.036317587, 0, 0, 0, 18.320599, 25.575619, -0.39728546, 13.743347)
-use_collision = true
-size = Vector3(3.7544556, 1, 13.879822)
-
 [node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1372288728]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.760227, 11.98488)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.19329429, 2.2509403)
 script = ExtResource("1_ig7tw")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=946739562]
@@ -58,18 +39,11 @@ shape = SubResource("CapsuleShape3D_1bvp3")
 [node name="Node3D" type="Node3D" parent="CharacterBody3D" unique_id=1612766895]
 
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Node3D" unique_id=2143269329]
-transform = Transform3D(1, 0, 0, 0, 0.9940867, 0.10858928, 0, -0.10858928, 0.9940867, 0, 3.4524622, -1.6974401)
-
-[node name="gun" parent="CharacterBody3D/Node3D/Camera3D" unique_id=2038045268 instance=ExtResource("4_5vw27")]
-transform = Transform3D(-2.590637, 0.010553857, -0.20750126, -0.034497604, 1.5690604, 0.23438266, 0.34350726, 0.23717123, -1.5413784, 0.4983431, -0.3354559, -1.1110048)
-script = SubResource("GDScript_5vw27")
-
-[node name="Node3D" type="Node3D" parent="CharacterBody3D/Node3D/Camera3D/gun" unique_id=424588587]
-transform = Transform3D(-0.99955386, 0.00256118, 0.029762555, 0.0050117304, 0.9965733, 0.08255648, -0.029449075, 0.0826688, -0.9961419, 0.0042204857, 0.032075882, 0.6567621)
+transform = Transform3D(1, 0, 0, 0, 0.9940867, 0.10858928, 0, -0.10858928, 0.9940867, 0, 2.7783346, 0.20172691)
 
 [node name="Sprite3D" type="Sprite3D" parent="CharacterBody3D/Node3D" unique_id=774694983]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2937965, -1.7317553)
-billboard = 1
+billboard = 2
 shaded = true
 no_depth_test = true
 texture_filter = 2
