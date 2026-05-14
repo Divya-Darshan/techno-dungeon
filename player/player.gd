@@ -11,8 +11,8 @@ var t_bob = 0.0
 var camera_base_pos: Vector3
 
 # player's sub nodes
-@onready var Head: Node3D = $Node3D
-@onready var camera: Camera3D = $Node3D/Camera3D
+@onready var Head: Node3D = $"."
+@onready var camera: Camera3D = $Camera3D
 
 
 

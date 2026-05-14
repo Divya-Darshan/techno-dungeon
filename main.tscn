@@ -1,47 +1,27 @@
 [gd_scene format=3 uid="uid://bqb2ar0b57ycr"]
 
 [ext_resource type="Script" uid="uid://dh5gxyfrg4wbi" path="res://player/player.gd" id="1_ig7tw"]
-[ext_resource type="Texture2D" uid="uid://m06pj5v46ld2" path="res://img/proto.png" id="2_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://l8j2w6biteyj" path="res://img/test/front.png" id="2_h2yge"]
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0xm2m"]
-sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-
-[sub_resource type="Sky" id="Sky_h2yge"]
-sky_material = SubResource("ProceduralSkyMaterial_0xm2m")
-
-[sub_resource type="Environment" id="Environment_1bvp3"]
-background_mode = 2
-sky = SubResource("Sky_h2yge")
-tonemap_mode = 2
-glow_enabled = true
+[ext_resource type="Texture2D" uid="uid://cdxxvpke3mgso" path="res://tes-2t.png" id="4_1bvp3"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1bvp3"]
+height = 2.9528809
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h2yge"]
+albedo_texture = ExtResource("4_1bvp3")
+texture_filter = 0
 
 [node name="Main" type="Node3D" unique_id=1497525646]
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=89520766]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 10.992386, 19.296934, -4.1282578)
-shadow_enabled = true
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1788702745]
-environment = SubResource("Environment_1bvp3")
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1372288728]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.19329429, 2.2509403)
 script = ExtResource("1_ig7tw")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=946739562]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.021050036, 2.1803627, -1.7197332)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.021050036, 2.3018353, -1.7333896)
 shape = SubResource("CapsuleShape3D_1bvp3")
 
-[node name="Node3D" type="Node3D" parent="CharacterBody3D" unique_id=1612766895]
-
-[node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Node3D" unique_id=2143269329]
-transform = Transform3D(1, 0, 0, 0, 0.9940867, 0.10858928, 0, -0.10858928, 0.9940867, 0, 2.7783346, 0.20172691)
-
-[node name="Sprite3D" type="Sprite3D" parent="CharacterBody3D/Node3D" unique_id=774694983]
+[node name="Sprite3D" type="Sprite3D" parent="CharacterBody3D" unique_id=774694983]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2937965, -1.7317553)
 billboard = 2
 shaded = true
@@ -49,46 +29,11 @@ no_depth_test = true
 texture_filter = 2
 texture = ExtResource("2_h2yge")
 
-[node name="Control" type="Control" parent="CharacterBody3D" unique_id=542920925]
-visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_left = 104.0
-offset_top = -58.0
-offset_right = 144.0
-offset_bottom = -18.0
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D" unique_id=2143269329]
+transform = Transform3D(1, 0, 0, 0, 0.9940867, 0.10858928, 0, -0.10858928, 0.9940867, -0.29189968, 2.5545568, 0.59442043)
 
-[node name="w" type="TouchScreenButton" parent="CharacterBody3D/Control" unique_id=452185636]
-position = Vector2(167, 353)
-scale = Vector2(0.40583554, 0.13023256)
-texture_normal = ExtResource("2_0xm2m")
-passby_press = true
-action = "w"
-
-[node name="w2" type="TouchScreenButton" parent="CharacterBody3D/Control" unique_id=724273681]
-position = Vector2(396, 447.00003)
-scale = Vector2(0.40583554, 0.13023256)
-texture_normal = ExtResource("2_0xm2m")
-passby_press = true
-action = "d"
-
-[node name="w3" type="TouchScreenButton" parent="CharacterBody3D/Control" unique_id=833423914]
-position = Vector2(175.00002, 536)
-scale = Vector2(0.40583554, 0.13023256)
-texture_normal = ExtResource("2_0xm2m")
-passby_press = true
-action = "s"
-
-[node name="w4" type="TouchScreenButton" parent="CharacterBody3D/Control" unique_id=631514871]
-position = Vector2(-31.99997, 457)
-scale = Vector2(0.40583554, 0.13023256)
-texture_normal = ExtResource("2_0xm2m")
-passby_press = true
-action = "a"
-
-[node name="jump" type="TouchScreenButton" parent="CharacterBody3D/Control" unique_id=308061570]
-position = Vector2(795.00006, 478)
-scale = Vector2(0.37812218, 0.22484201)
-texture_normal = ExtResource("2_0xm2m")
-passby_press = true
-action = "ui_accept"
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1831309297]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.772255, 0, -23.411747)
+material_override = SubResource("StandardMaterial3D_h2yge")
+use_collision = true
+size = Vector3(282.7931, 1, 290.37106)
