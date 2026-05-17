@@ -61,7 +61,7 @@ data = {
 }
 
 [node name="eris" parent="." unique_id=1573923652 instance=ExtResource("5_lquwl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.022615433, 0, -31.209553)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.18584251, 0.055313826, -30.576384)
 
 [node name="duck" parent="." unique_id=1842219288 instance=ExtResource("4_1bvp3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.354576, 0, -31.064308)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.941379, 0.01428777, -29.250309)
