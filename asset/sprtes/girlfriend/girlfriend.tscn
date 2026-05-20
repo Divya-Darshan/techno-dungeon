@@ -129,7 +129,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 20.0
+"speed": 28.0
 }]
 
 [node name="gitlfriend" type="CharacterBody3D" unique_id=1573923652]
