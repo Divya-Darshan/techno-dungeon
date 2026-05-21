@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://yiys1ll8626c" path="res://asset/sprtes/girlfriend/girlfriend.tscn" id="7_272bh"]
 [ext_resource type="PackedScene" uid="uid://isp5uvc48np0" path="res://asset/sprtes/kit/gobbles.tscn" id="8_5vw27"]
 [ext_resource type="PackedScene" uid="uid://d1b75s3ahmh3d" path="res://asset/sprtes/MD/md.tscn" id="9_kek77"]
+[ext_resource type="PackedScene" uid="uid://4bxpl2pedlxj" path="res://asset/sprtes/MD/air.tscn" id="10_4c57u"]
+[ext_resource type="PackedScene" uid="uid://bnlv1retel8wb" path="res://asset/sprtes/Peppino Spaghetti/Peppino.tscn" id="11_efxa6"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_h2yge"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -22,6 +24,8 @@ background_mode = 2
 sky = SubResource("Sky_1bvp3")
 tonemap_mode = 2
 glow_enabled = true
+glow_bloom = 0.01
+glow_hdr_threshold = 1.31
 volumetric_fog_density = 0.4175
 adjustment_enabled = true
 
@@ -39,7 +43,7 @@ light_energy = 0.906
 shadow_enabled = true
 shadow_normal_bias = 7.059
 shadow_transmittance_bias = -1.145
-shadow_blur = 2.155
+shadow_blur = 1.059
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1372288728]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0654964, 0.22525668, -23.517908)
@@ -87,3 +91,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5072856, 0, -29.991081)
 
 [node name="md" parent="." unique_id=1140903339 instance=ExtResource("9_kek77")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 7.532297, 0, -30.416323)
+
+[node name="air" parent="." unique_id=427940455 instance=ExtResource("10_4c57u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -77.12926)
+
+[node name="Peppino" parent="." unique_id=246155110 instance=ExtResource("11_efxa6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.083688, 0, -26.634516)
