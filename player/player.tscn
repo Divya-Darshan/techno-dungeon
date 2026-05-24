@@ -1,46 +1,57 @@
 [gd_scene format=3 uid="uid://bqyj4duv3rrlm"]
 
 [ext_resource type="Script" uid="uid://dh5gxyfrg4wbi" path="res://player/player.gd" id="1_rkbax"]
-[ext_resource type="Texture2D" uid="uid://l0tl6xuamwr5" path="res://player/Sprites/RUN/run_down.png" id="2_rkbax"]
+[ext_resource type="Texture2D" uid="uid://wjdj0vlde74k" path="res://player/Sprites/idle/sprite sheets/idle.png" id="2_rkbax"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1bvp3"]
 height = 2.9528809
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_rkbax"]
+atlas = ExtResource("2_rkbax")
+region = Rect2(0, 0, 46, 55)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_g1dw6"]
 atlas = ExtResource("2_rkbax")
-region = Rect2(0, 0, 96, 80)
+region = Rect2(46, 0, 46, 55)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yw30f"]
 atlas = ExtResource("2_rkbax")
-region = Rect2(96, 0, 96, 80)
+region = Rect2(92, 0, 46, 55)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qjkh3"]
 atlas = ExtResource("2_rkbax")
-region = Rect2(192, 0, 96, 80)
+region = Rect2(138, 0, 46, 55)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g6k8r"]
 atlas = ExtResource("2_rkbax")
-region = Rect2(288, 0, 96, 80)
+region = Rect2(184, 0, 46, 55)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_boad6"]
 atlas = ExtResource("2_rkbax")
-region = Rect2(384, 0, 96, 80)
+region = Rect2(230, 0, 46, 55)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rgyib"]
 atlas = ExtResource("2_rkbax")
-region = Rect2(480, 0, 96, 80)
+region = Rect2(276, 0, 46, 55)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hg6s5"]
 atlas = ExtResource("2_rkbax")
-region = Rect2(576, 0, 96, 80)
+region = Rect2(322, 0, 46, 55)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8t03j"]
 atlas = ExtResource("2_rkbax")
-region = Rect2(672, 0, 96, 80)
+region = Rect2(368, 0, 46, 55)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ieo8"]
+atlas = ExtResource("2_rkbax")
+region = Rect2(414, 0, 46, 55)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2ieo8"]
 animations = [{
 "frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rkbax")
+}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_g1dw6")
 }, {
@@ -64,10 +75,13 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8t03j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ieo8")
 }],
 "loop": true,
 "name": &"default",
-"speed": 8.0
+"speed": 10.0
 }]
 
 [node name="player" type="CharacterBody3D" unique_id=1918745686]
@@ -78,8 +92,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.021050036, 2.1696453, -1.7
 shape = SubResource("CapsuleShape3D_1bvp3")
 
 [node name="Sprite3D" type="AnimatedSprite3D" parent="." unique_id=166773746]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0032784939, 2.2937965, -1.7317562)
-pixel_size = 0.09
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0032784939, 2.0676563, -1.7317562)
+pixel_size = 0.05
 billboard = 2
 shaded = true
 alpha_cut = 1
@@ -87,6 +101,7 @@ alpha_scissor_threshold = 0.3
 texture_filter = 2
 sprite_frames = SubResource("SpriteFrames_2ieo8")
 autoplay = "default"
+frame_progress = 0.024473341
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=699698483]
 transform = Transform3D(1, 0, 0, 0, 0.9940867, 0.10858928, 0, -0.10858928, 0.9940867, -0.0042230785, 2.6952229, 1.0739899)
