@@ -6,6 +6,11 @@
 script/source = "extends CharacterBody3D
 
 # =========================
+# VISUAL NODE
+# =========================
+@onready var visual = $AnimatedSprite3D
+
+# =========================
 # MOVEMENT
 # =========================
 @export var SPEED := 3.0
@@ -41,7 +46,10 @@ var base_scale := Vector3.ONE
 
 
 func _ready() -> void:
-	base_scale = scale
+
+	# IMPORTANT:
+	# Save VISUAL scale, not CharacterBody scale
+	base_scale = visual.scale
 
 
 func _physics_process(delta: float) -> void:
@@ -61,7 +69,9 @@ func _physics_process(delta: float) -> void:
 	else:
 		direction = Vector3.RIGHT
 
-	# Move
+	# =========================
+	# MOVE
+	# =========================
 	position += direction * SPEED * delta
 
 	# =========================
@@ -96,23 +106,25 @@ func _physics_process(delta: float) -> void:
 
 	# =========================
 	# SQUASH & STRETCH
+	# IMPORTANT:
+	# Scale ONLY the visual node
 	# =========================
 	var squash_wave = sin(time * SQUASH_SPEED)
 
-	scale.x = lerp(
-		scale.x,
+	visual.scale.x = lerp(
+		visual.scale.x,
 		base_scale.x + squash_wave * STRETCH_AMOUNT,
 		6.0 * delta
 	)
 
-	scale.y = lerp(
-		scale.y,
+	visual.scale.y = lerp(
+		visual.scale.y,
 		base_scale.y - squash_wave * STRETCH_AMOUNT * 0.5,
 		6.0 * delta
 	)
 
-	scale.z = lerp(
-		scale.z,
+	visual.scale.z = lerp(
+		visual.scale.z,
 		base_scale.z + squash_wave * STRETCH_AMOUNT,
 		6.0 * delta
 	)
