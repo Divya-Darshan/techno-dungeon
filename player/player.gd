@@ -13,6 +13,7 @@ var camera_base_pos: Vector3
 # player's sub nodes
 @onready var Head: Node3D = $"."
 @onready var camera: Camera3D = $Camera3D
+@onready var sprite_3d: AnimatedSprite3D = $Sprite3D
 
 
 
