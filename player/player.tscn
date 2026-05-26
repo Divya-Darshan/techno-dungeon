@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cml0fuvbpqn70" path="res://player/Sprites/walk/sprite sheets/walk.png" id="4_qjkh3"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1bvp3"]
-height = 2.9528809
+height = 2.4935303
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qjkh3"]
 atlas = ExtResource("2_yw30f")
@@ -277,7 +277,7 @@ animations = [{
 script = ExtResource("1_rkbax")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1031255661]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.021050036, 2.244572, -1.7333896)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.021050036, 2.0148966, -1.7333896)
 shape = SubResource("CapsuleShape3D_1bvp3")
 
 [node name="Sprite3D" type="AnimatedSprite3D" parent="." unique_id=166773746]

@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://uod6p26ctups" path="res://asset/sprtes/gardevoir/gardevodir.tscn" id="12_dg77c"]
 [ext_resource type="PackedScene" uid="uid://crxc47qvmk0jh" path="res://asset/sprtes/medic/medic.tscn" id="13_ycdy4"]
 [ext_resource type="PackedScene" uid="uid://3xh3ni4fphj8" path="res://asset/sprtes/cuphead/cuphead.tscn" id="14_w48qg"]
+[ext_resource type="PackedScene" uid="uid://bu0uk34xp8l38" path="res://asset/sprtes/minecraft bed/bed.blend" id="15_2cqfq"]
 [ext_resource type="PackedScene" uid="uid://b4qds0otjcp1f" path="res://asset/sprtes/sonic.exe/sonicexe.tscn" id="15_vivmo"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_h2yge"]
@@ -92,3 +93,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.273444, 0, -30.18996)
 
 [node name="sonicexe" parent="." unique_id=33620806 instance=ExtResource("15_vivmo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.57538, 0, -30.525005)
+
+[node name="bed" parent="." unique_id=588389215 instance=ExtResource("15_2cqfq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.362672, 1.7881392e-07, -29.758198)
