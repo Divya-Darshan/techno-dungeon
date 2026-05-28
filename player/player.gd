@@ -15,7 +15,8 @@ var camera_base_pos: Vector3
 @onready var camera: Camera3D = $Camera3D
 @onready var sprite_3d: AnimatedSprite3D = $Sprite3D
 
-
+func player():
+	pass
 
 
 func _ready() -> void:
